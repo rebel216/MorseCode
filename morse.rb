@@ -50,3 +50,9 @@ def sentence_decoder(sentence)
     @current_sentence = sentence.split('   ').map { |word| word_decoder(word) }.join
     print "#{@current_sentence.downcase} \n"
 end
+
+sentence_decoder('-- -.--   -. .- -- .')
+
+sentence_decoder('.-  .-..  .  -..-  .-  -.  -..  .  .-.     ..  ...     ...  ..  -.-.  -.-')
+
+sentence_decoder('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
