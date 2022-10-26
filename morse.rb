@@ -1,3 +1,4 @@
+
 def decode_char(char)
   chars_to_morse_message = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F',
