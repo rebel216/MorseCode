@@ -38,3 +38,9 @@ def decode_char(code)
         print " "
     end
 end
+
+# Decode each word
+def word_decoder(word)
+    @current_word = word.split.map { |letter| letter_decoder(letter) }.join
+    "#{@current_word} "
+  end
