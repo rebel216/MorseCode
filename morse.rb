@@ -28,14 +28,15 @@
 }
 
 def decode_char(code)
-    @words = code.split('   ')
+    @words = code.split
     decode_words(@words)   
 end
 
 def decode_words(words)
-    @words.each do |word|
-        @current_words = word.split(' ') 
-        decode_sentence(@current_word)      
+    @words.each do |word|        
+        @current_words = word.split
+        decode_sentence(@current_word)
+             
     end
     
 end
@@ -43,9 +44,9 @@ end
 def decode_sentence(current_words)
     @current_words.each do |current_word|
         @current_letter = @dictionary[current_word]
-        print "#{@current_letter}"
+        print "#{@current_letter.downcase}"
     end
-    print " "
+    
 end
 
 
