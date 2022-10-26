@@ -43,4 +43,10 @@ end
 def word_decoder(word)
     @current_word = word.split.map { |letter| letter_decoder(letter) }.join
     "#{@current_word} "
-  end
+end
+
+# Decode each sentence
+def sentence_decoder(sentence)
+    @current_sentence = sentence.split('   ').map { |word| word_decoder(word) }.join
+    print "#{@current_sentence.downcase} \n"
+end
