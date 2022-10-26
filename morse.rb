@@ -28,12 +28,12 @@
 }
 
 def decode_char(code)
-  @words = code.split('   ')
+  @words = code.split
   @words.each do |word|
-    @current_words = word.split(' ')
+    @current_words = word.split
     @current_words.each do |current_word|
       @current_letter = @dictionary[current_word]
-      print "#{@current_letter}"
+      print @current_letter.to_s
     end
     print ' '
   end
@@ -42,7 +42,7 @@ end
 # Decode each word
 def word_decoder(word)
   @current_word = word.split.map { |letter| letter_decoder(letter) }.join
-  "#{@current_word}"
+  @current_word.to_s
 end
 
 # Decode each sentence
