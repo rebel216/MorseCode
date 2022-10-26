@@ -1,52 +1,33 @@
-@dictionary = {
-  '.-' => 'A',
-  '-...' => 'B',
-  '-.-.' => 'C',
-  '-..' => 'D',
-  '.' => 'E',
-  '..-.' => 'F',
-  '--.' => 'G',
-  '....' => 'H',
-  '..' => 'I',
-  '.---' => 'J',
-  '-.-' => 'K',
-  '.-..' => 'L',
-  '--' => 'M',
-  '-.' => 'N',
-  '---' => 'O',
-  '.--.' => 'P',
-  '--.-' => 'Q',
-  '.-.' => 'R',
-  '...' => 'S',
-  '-' => 'T',
-  '..-' => 'U',
-  '...-' => 'V',
-  '.--' => 'W',
-  '-..-' => 'X',
-  '-.--' => 'Y',
-  '--..' => 'Z'
-}
-
-def decode_char(code)
-    @words = code.split
-    decode_words(@words)   
+def decode_char(char)
+  chars_to_morse_message = {
+    '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F',
+    '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L',
+    '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R',
+    '...' => 'S', '-' => 'T', '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
+    '-.--' => 'Y', '--..' => 'Z', '   ' => ' ', ' ' => ''
+  }
+  chars_to_morse_message[char]
 end
 
-def decode_words(words)
-    @words.each do |word|
-        @current_words = word.split
-        decode_sentence(@current_word)   
-    end
-    
+def decode_word(word)
+  final_word = ''
+  word.split(/ /).each do |char|
+    final_word += decode_char(char)
+  end
+  final_word
 end
 
-def decode_sentence(current_words)
-    @current_words.each do |current_word|
-        @current_letter = @dictionary[current_word]
-        print @current_letter.downcase.to_s
-    end
-    
+def decode_morse_code_sentence(sentence)
+  final_sentence = ''
+  sentence = sentence.split(/   /)
+  sentence.each do |word|
+    final_sentence += decode_word(word)
+    final_sentence += ' '
+  end
+  final_sentence
 end
 
-
-decode_char('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode_morse_code_sentence('-- -.--   -. .- -- .')
+# MY NAEME
+puts decode_morse_code_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+# A BOX FULL OF RUBIES
