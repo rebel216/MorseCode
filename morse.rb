@@ -33,14 +33,14 @@ def decode_char(code)
   print "\n"
 end
 
-def decode_words(words)
+def decode_words()
   @words.each do |word|
     @current_words = word.split
     decode_sentence(@current_word)
   end
 end
 
-def decode_sentence(current_word)
+def decode_sentence()
   @current_words.each do |current_word|
     @current_letter = @dictionary[current_word]
     print @current_letter.downcase.to_s
