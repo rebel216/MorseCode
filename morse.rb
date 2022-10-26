@@ -43,7 +43,7 @@ end
 def decode_sentence()
   @current_words.each do |current_word|
     @current_letter = @dictionary[current_word]
-    print @current_letter.downcase.to_s
+    print @current_letter.to_s
   end
 end
 
