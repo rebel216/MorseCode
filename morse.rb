@@ -29,14 +29,14 @@
 
 def decode_char(code)
   @words = code.split
-  decode_words(@words)
+  decode_words()
   print "\n"
 end
 
 def decode_words()
   @words.each do |word|
     @current_words = word.split
-    decode_sentence(@current_word)
+    decode_sentence()
   end
 end
 
