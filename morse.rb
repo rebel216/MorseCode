@@ -28,25 +28,23 @@
 }
 
 def decode_char(code)
-    @words = code.split('   ')
-    decode_words(@words)   
+  @words = code.split('   ')
+  decode_words(@words)
 end
 
-def decode_words(words)
-    @words.each do |word|
-        @current_words = word.split(' ') 
-        decode_sentence(@current_word)      
-    end
-    
+def decode_words(_words)
+  @words.each do |word|
+    @current_words = word.split(' ')
+    decode_sentence(@current_word)
+  end
 end
 
-def decode_sentence(current_words)
-    @current_words.each do |current_word|
-        @current_letter = @dictionary[current_word]
-        print "#{@current_letter}"
-    end
-    print " "
+def decode_sentence(_current_words)
+  @current_words.each do |current_word|
+    @current_letter = @dictionary[current_word]
+    print "#{@current_letter}"
+  end
+  print ' '
 end
-
 
 decode_char('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
