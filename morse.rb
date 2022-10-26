@@ -33,10 +33,11 @@ def decode_char(code)
 end
 
 def decode_words(words)
-    @words.each do |word|        
+    print ' '
+    @words.each do |word|
         @current_words = word.split
-        decode_sentence(@current_word)
-             
+        decode_sentence(@current_word) 
+        print ' '     
     end
     
 end
