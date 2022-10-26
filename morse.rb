@@ -33,9 +33,9 @@ def decode_char(code)
   @current_words = word.split(' ')
   @current_words.each do |current_word|
   @current_letter = @dictionary[current_word]
-        print "#{@current_letter}"
+  print "#{@current_letter}"
         end
-        print " "
+  print " "
     end
 end
 
@@ -47,7 +47,7 @@ end
 
 # Decode each sentence
 def sentence_decoder(sentence)
-  @current_sentence = sentence.split('   ').map { |word| word_decoder(word) }.join
+    @current_sentence = sentence.split('   ').map { |word| word_decoder(word) }.join
     print "#{@current_sentence.downcase} \n"
 end
 
