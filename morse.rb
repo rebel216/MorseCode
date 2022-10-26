@@ -51,8 +51,8 @@ def sentence_decoder(sentence)
   print "#{@current_sentence.downcase} \n"
 end
 
-sentence_decoder('-- -.--   -. .- -- .')
+decode_char('-- -.--   -. .- -- .')
 
-sentence_decoder('.-  .-..  .  -..-  .-  -.  -..  .  .-.     ..  ...     ...  ..  -.-.  -.-')
+decode_char('.-  .-..  .  -..-  .-  -.  -..  .  .-.     ..  ...     ...  ..  -.-.  -.-')
 
-sentence_decoder('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+decode_char('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
