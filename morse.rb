@@ -35,6 +35,6 @@ def decode_char(code)
             @current_letter = @dictionary[current_word]
             print "#{@current_letter}"
         end
-        
+        print " "
     end
 end
